@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Spend Map</title>
+<meta name="description" content="Privacy policy for the Spend Map Android app.">
+<meta name="color-scheme" content="light dark">
+<style>
+  :root {
+    --bg: #f7f3ec; --surface: #fffdf8; --ink: #2e1c18; --soft: #6b544e;
+    --line: #e2d8c9; --accent: #8a5a3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12100f; --surface: #1b1816; --ink: #f5f2ea; --soft: #a49a90;
+      --line: #2e2926; --accent: #d9a273;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 46rem; margin: 0 auto; padding: 3rem 16px 5rem; }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 1.5rem; letter-spacing: -.02em; }
+  h2 {
+    font-size: 1.15rem; margin: 2.5rem 0 .75rem; letter-spacing: -.01em;
+    padding-top: 1.25rem; border-top: 1px solid var(--line);
+  }
+  h1 + h2 { border-top: 0; padding-top: 0; margin-top: 1.5rem; }
+  p, li { color: var(--ink); }
+  a { color: var(--accent); }
+  ul { padding-left: 1.25rem; }
+  li { margin: .4rem 0; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .875em; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 4px; padding: .1em .35em; overflow-wrap: anywhere;
+  }
+  pre {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 1rem; overflow-x: auto;
+  }
+  pre code { background: none; border: 0; padding: 0; font-size: .85rem; }
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: .925rem; }
+  th, td { text-align: left; vertical-align: top; padding: .6rem .7rem; border-bottom: 1px solid var(--line); }
+  th { color: var(--soft); font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; }
+  footer { margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--soft); font-size: .875rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy — Spend Map</h1>
+<p><strong>Effective date:</strong> 18 September 2026</p>
+<p><strong>Applies to:</strong> Spend Map for Android (<code>com.spendmap</code>), version 0.1.7 and later</p>
+<h2>The short version</h2>
+<p>Spend Map is an offline budgeting app. There is no account, no sign-up, and no server belonging to us. Everything you enter stays in a single file on your own phone. We cannot see your financial data, because it is never sent to us.</p>
+<h2>What we collect</h2>
+<p><strong>Nothing.</strong> We operate no servers, no analytics, no crash reporting, no advertising and no trackers. The app contains no third-party analytics or telemetry SDKs of any kind.</p>
+<h2>If the app crashes</h2>
+<p>If the app crashes, it saves a short technical report in the app's private storage on your phone: the error, the app version, the Android version and the phone model. It is meant to hold none of your budget data. It is never sent anywhere automatically and there is no reporting service behind it. A <strong>Share crash log</strong> row appears in Settings so that you can send it to us yourself if you want to, and you can read it in the share sheet first.</p>
+<h2>What the app stores, and where</h2>
+<p>Everything you enter — accounts, transactions, categories, budgets, goals, recurring payments and net-worth history — is written to a single JSON file in the app's private storage on your device:</p>
+<pre><code>/data/data/com.spendmap/files/spendmap-state.json</code></pre>
+<p>Android prevents other apps from reading that directory. The file is removed when you uninstall the app.</p>
+<h2>Purchases</h2>
+<p>Spend Map offers an optional paid subscription and a one-time lifetime purchase. Payments are processed entirely by <strong>Google Play Billing</strong> — we never see or receive your card number, billing address or any payment details. The app receives only a purchase/entitlement status ("active", "expired") from Google Play in order to unlock features, and caches that status locally on your device. Google's handling of the transaction is covered by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<h2>Notifications</h2>
+<p>The app requests the <code>POST_NOTIFICATIONS</code> permission solely to show you <strong>local reminders about your own upcoming bills</strong>, generated on your device from the recurring payments you entered. No notification content leaves your phone, and nothing is sent through any server. You can decline the permission, or turn reminders off in Settings, and the rest of the app works normally.</p>
+<h2>Backups</h2>
+<p>Spend Map participates in <strong>Android Auto Backup</strong>, which may copy <code>spendmap-state.json</code> to your own Google account so your data survives moving to a new phone. Specifically:</p>
+<ul><li>Only that one file is included. The app's other local files, caches and preferences are excluded.</li><li>Cloud backup is disabled on devices without a screen lock (<code>disableIfNoEncryptionCapabilities</code>). Where it does run, Android encrypts the backup end-to-end with your device lock credential, so Google cannot read it.</li><li>Device-to-device transfer (moving to a new phone during setup) copies the file directly between devices and never touches Google's servers.</li></ul>
+<p>This is your backup, in your Google account, not ours. You can turn Android backup off entirely in your system settings.</p>
+<h2>Internet access</h2>
+<p>Spend Map makes no network requests to us or to any third party for your data. The only components that touch the network are Google Play Billing (for purchase verification, above) and the Google Play Store itself.</p>
+<p>The travel screen draws its globe on the device from map data bundled inside the app. It makes <strong>no network request</strong>.</p>
+<h2>Permissions, and why they appear</h2>
+<p>The installed app lists more permissions than it appears to need, because Android libraries contribute their own. In full:</p>
+<div class="scroll"><table><thead><tr><th>Permission</th><th>Requested by</th><th>Used for</th></tr></thead><tbody><tr><td><code>POST_NOTIFICATIONS</code></td><td>Spend Map</td><td>Local reminders about your own upcoming bills</td></tr><tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Google Play Billing</td><td>Verifying a purchase or subscription with Google Play</td></tr><tr><td><code>WAKE_LOCK</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>FOREGROUND_SERVICE</code></td><td>AndroidX WorkManager</td><td>Letting the local bill-reminder schedule survive a reboot</td></tr><tr><td><code>VIBRATE</code></td><td>Spend Map</td><td>One short buzz on Home when spending goes past your budget</td></tr><tr><td><code>ACCESS_COARSE_LOCATION</code> (optional)</td><td>Spend Map</td><td>Travel mode only: showing where a trip starts on the globe. Asked only when you tap "Use my location", read on the device, never stored or sent anywhere</td></tr></tbody></table></div>
+<p>None of these are used to transmit your financial data. Without the optional location permission, Travel mode guesses your starting point from the country your phone's network reports, also on the device. Spend Map requests no contacts, camera, storage, SMS or notification-access permissions.</p>
+<h2>Sharing</h2>
+<p>We do not sell, rent, share or disclose your data to anyone, because we do not have it.</p>
+<h2>Your control over your data</h2>
+<ul><li><strong>Export</strong> — Settings → Export data writes a JSON copy wherever you choose.</li><li><strong>Import</strong> — Settings → Import data replaces the current state from a file.</li><li><strong>Delete</strong> — uninstalling the app deletes the data file. To also remove the Google backup copy, delete the app's backup from your Google account settings.</li></ul>
+<h2>Children</h2>
+<p>Spend Map is not directed at children and we do not knowingly collect any data from anyone, of any age.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the effective date above will be updated, and material changes will be noted in the app's release notes.</p>
+<h2>Contact</h2>
+<p>Questions about this policy: <strong><a href="mailto:spendmap.app@gmail.com">spendmap.app@gmail.com</a></strong></p>
+<footer>Spend Map for Android. This page is generated from PRIVACY.md in the app's source repository.</footer>
+</main>
+</body>
+</html>
