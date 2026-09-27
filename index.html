@@ -55,7 +55,7 @@
 <body>
 <main>
 <h1>Privacy Policy — Spend Map</h1>
-<p><strong>Effective date:</strong> 18 September 2026</p>
+<p><strong>Effective date:</strong> 27 September 2026</p>
 <p><strong>Applies to:</strong> Spend Map for Android (<code>com.spendmap</code>), version 0.1.7 and later</p>
 <h2>The short version</h2>
 <p>Spend Map is an offline budgeting app. There is no account, no sign-up, and no server belonging to us. Everything you enter stays in a single file on your own phone. We cannot see your financial data, because it is never sent to us.</p>
@@ -73,7 +73,7 @@
 <p>The app requests the <code>POST_NOTIFICATIONS</code> permission solely to show you <strong>local reminders about your own upcoming bills</strong>, generated on your device from the recurring payments you entered. No notification content leaves your phone, and nothing is sent through any server. You can decline the permission, or turn reminders off in Settings, and the rest of the app works normally.</p>
 <h2>Backups</h2>
 <p>Spend Map participates in <strong>Android Auto Backup</strong>, which may copy <code>spendmap-state.json</code> to your own Google account so your data survives moving to a new phone. Specifically:</p>
-<ul><li>Only that one file is included. The app's other local files, caches and preferences are excluded.</li><li>Cloud backup is disabled on devices without a screen lock (<code>disableIfNoEncryptionCapabilities</code>). Where it does run, Android encrypts the backup end-to-end with your device lock credential, so Google cannot read it.</li><li>Device-to-device transfer (moving to a new phone during setup) copies the file directly between devices and never touches Google's servers.</li></ul>
+<ul><li>Two things are included: that file, and a small record of when your free trial began and whether you have a plan (so reinstalling the app does not start a second free trial). The app's other local files, caches and preferences are excluded.</li><li>The trial start date is also kept in <strong>Google Play services Block Store</strong> on your phone, which keeps it through an uninstall while your phone's Google backup is on. It is a single date; nothing else is stored there.</li><li>Cloud backup is disabled on devices without a screen lock (<code>disableIfNoEncryptionCapabilities</code>). Where it does run, Android encrypts the backup end-to-end with your device lock credential, so Google cannot read it.</li><li>Device-to-device transfer (moving to a new phone during setup) copies the file directly between devices and never touches Google's servers.</li></ul>
 <p>This is your backup, in your Google account, not ours. You can turn Android backup off entirely in your system settings.</p>
 <h2>Internet access</h2>
 <p>Spend Map makes no network requests to us or to any third party for your data. The only components that touch the network are Google Play Billing (for purchase verification, above) and the Google Play Store itself.</p>
